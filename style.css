@@ -6,14 +6,36 @@
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: none;
 }
 
 /* STYLE */
 
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
 .containerimg {
     width: 50%;
+    padding: 100px;
     margin: 0 auto;
-    padding-top: 200px;
     color: cadetblue;
+    background-color: black;
+}
+
+.active {
+    display: block;
+}
+
+
+.btn-container button {
+    padding: 10px 15px;
+    margin: 0 auto;
 }

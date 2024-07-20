@@ -2,35 +2,41 @@
 
 // creo l'array
 const Images = [
-    './js/img/01.webp',
-    './js/img/02.webp',
-    './js/img/03.webp',
-    './js/img/04.webp',
-    './js/img/05.webp'
+    'img/01.webp',
+    'img/02.webp',
+    'img/03.webp',
+    'img/04.webp',
+    'img/05.webp'
 ]
 
-Container.innerHTML = (`
-    
-    
-    
-    `
+const ContainerImg = document.querySelector('.containerimg');
 
-)
+// ciclo per far apparire le img
+for (let i =0; i < Images.length; i++) {
 
-const Container = document.createElement('div');
-
-for ( i = 0; i < 6; i++) {
-    const Container = document.createElement('div');
-
-    for ( Images [i] = 0; i < 6; i++ ) {
-        Container.innerHTML = Images;
+    if (i == 0) {
+        ContainerImg.innerHTML += `<img src="${Images[i]}" class="active">`;
     }
+
+    else {
+        ContainerImg.innerHTML += `<img src="${Images[i]}">`;
+    }
+
 }
 
-Container.innerHTML = (`
-    
-    
-    
-    `)
+// click bottone
 
+let ActiveImg = 0;
+
+const ButtonImg = document.querySelector('.btn-container');
+
+ButtonImg.addEventListener('click', function() {
+
+    document.querySelector('.containerimg img').classList.remove('active');
+
+    ActiveImg++;
+
+    document.querySelector('.containerimg img').classList.add('active');
+
+});
 
