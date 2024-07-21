@@ -26,9 +26,9 @@ for (let i =0; i < Images.length; i++) {
 
 // click bottone
 
-let ActiveImg = 0;
+let ActiveImg = Images[0];
 
-const ButtonImg = document.querySelector('.btn-container');
+const ButtonImg = document.getElementsByClassName('.btn-container');
 
 ButtonImg.addEventListener('click', function() {
 
